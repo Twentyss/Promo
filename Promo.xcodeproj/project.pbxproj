@@ -17,6 +17,11 @@
 		0902BF0125BE0B6800FCA3ED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0902BF0025BE0B6800FCA3ED /* GoogleService-Info.plist */; };
 		0902BF0425BE171500FCA3ED /* PlacesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0902BF0325BE171400FCA3ED /* PlacesCollectionViewController.swift */; };
 		0902BF0925BE269E00FCA3ED /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0902BF0825BE269E00FCA3ED /* User.swift */; };
+		0902BF0D25BE36E500FCA3ED /* PlaceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0902BF0C25BE36E500FCA3ED /* PlaceCollectionViewCell.swift */; };
+		0902BF1025BE370B00FCA3ED /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0902BF0F25BE370B00FCA3ED /* ProfileViewController.swift */; };
+		0902BF2425BE534600FCA3ED /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0902BF2325BE534600FCA3ED /* Place.swift */; };
+		09A2133325C1B77600F0BA30 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A2133225C1B77600F0BA30 /* DataManager.swift */; };
+		09A2133825C1D0EE00F0BA30 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A2133725C1D0EE00F0BA30 /* LaunchViewController.swift */; };
 		5209021F48A8407F3E20070E /* Pods_Promo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D948C289CF4DC1E1473CDDFA /* Pods_Promo.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +38,11 @@
 		0902BF0025BE0B6800FCA3ED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0902BF0325BE171400FCA3ED /* PlacesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesCollectionViewController.swift; sourceTree = "<group>"; };
 		0902BF0825BE269E00FCA3ED /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0902BF0C25BE36E500FCA3ED /* PlaceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCollectionViewCell.swift; sourceTree = "<group>"; };
+		0902BF0F25BE370B00FCA3ED /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		0902BF2325BE534600FCA3ED /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		09A2133225C1B77600F0BA30 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		09A2133725C1D0EE00F0BA30 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		7D278467E8DB2C449A75E5BF /* Pods-Promo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Promo.release.xcconfig"; path = "Target Support Files/Pods-Promo/Pods-Promo.release.xcconfig"; sourceTree = "<group>"; };
 		D2E2172CA98B737182379F5D /* Pods-Promo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Promo.debug.xcconfig"; path = "Target Support Files/Pods-Promo/Pods-Promo.debug.xcconfig"; sourceTree = "<group>"; };
 		D948C289CF4DC1E1473CDDFA /* Pods_Promo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Promo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +81,7 @@
 		0902BEBD25BDC4F100FCA3ED /* Promo */ = {
 			isa = PBXGroup;
 			children = (
+				09A2133525C1BC4000F0BA30 /* Services */,
 				0902BF0625BE263900FCA3ED /* Model */,
 				0902BEF925BE05E700FCA3ED /* Controllers */,
 				0902BF0725BE267D00FCA3ED /* Storyboards */,
@@ -97,6 +108,9 @@
 				0902BEC225BDC4F100FCA3ED /* SignInViewController.swift */,
 				0902BEFB25BE061500FCA3ED /* SignUpViewController.swift */,
 				0902BF0325BE171400FCA3ED /* PlacesCollectionViewController.swift */,
+				0902BF0C25BE36E500FCA3ED /* PlaceCollectionViewCell.swift */,
+				0902BF0F25BE370B00FCA3ED /* ProfileViewController.swift */,
+				09A2133725C1D0EE00F0BA30 /* LaunchViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -105,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				0902BF0825BE269E00FCA3ED /* User.swift */,
+				0902BF2325BE534600FCA3ED /* Place.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -116,6 +131,14 @@
 				0902BEC925BDC4F400FCA3ED /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		09A2133525C1BC4000F0BA30 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				09A2133225C1B77600F0BA30 /* DataManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		544C106A6D87C9DF12600A19 /* Frameworks */ = {
@@ -250,11 +273,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0902BF0D25BE36E500FCA3ED /* PlaceCollectionViewCell.swift in Sources */,
+				09A2133325C1B77600F0BA30 /* DataManager.swift in Sources */,
 				0902BEC325BDC4F100FCA3ED /* SignInViewController.swift in Sources */,
 				0902BF0425BE171500FCA3ED /* PlacesCollectionViewController.swift in Sources */,
 				0902BF0925BE269E00FCA3ED /* User.swift in Sources */,
 				0902BEBF25BDC4F100FCA3ED /* AppDelegate.swift in Sources */,
 				0902BEFC25BE061500FCA3ED /* SignUpViewController.swift in Sources */,
+				0902BF2425BE534600FCA3ED /* Place.swift in Sources */,
+				09A2133825C1D0EE00F0BA30 /* LaunchViewController.swift in Sources */,
+				0902BF1025BE370B00FCA3ED /* ProfileViewController.swift in Sources */,
 				0902BEC125BDC4F100FCA3ED /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

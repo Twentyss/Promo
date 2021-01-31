@@ -6,5 +6,16 @@
 //
 
 import Foundation
+import FirebaseAuth
 
+struct User {
+    var userId: String
+    var email: String?
+    var name: String
+    var visitedPlaces: [VisitedPlace]
+}
 
+struct VisitedPlace {
+    var placeId: Int
+    var visitsCount: Int
+}

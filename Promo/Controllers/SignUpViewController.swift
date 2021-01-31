@@ -9,7 +9,10 @@ import UIKit
 import Firebase
 
 class SignUpViewController: UIViewController {
+    
+    private var user: User!
 
+    @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var repeatedPasswordTextField: UITextField!
@@ -20,23 +23,45 @@ class SignUpViewController: UIViewController {
 //        performSegue(withIdentifier: "", sender: nil)
     }
     
+//    private func createUser() {
+//        guard let (email, password) = validateUserData() else { return }
+//
+//
+//        FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password) { (authDataResult, error) in
+//            if let error = error {
+//                print(error.localizedDescription)
+//                return
+//            }
+//        }
+//    }
+    
     private func createUser() {
-        guard let email = emailTextField.text else { return }
-        guard let password = passwordTextField.text else { return }
+        createUserModel()
+        createUserInFirebase()
+    }
+    
+    private func createUserModel() {
+        
+        
+    }
+    
+    private func createUserInFirebase() {
+        
+    }
+    
+    
+    private func validateUserData() -> (String, String)? {
+        guard let email = emailTextField.text else { return nil }
+        guard let password = passwordTextField.text else { return nil }
+        
         
         guard
             let repeatedPassword = repeatedPasswordTextField.text,
             repeatedPassword == password
         else {
-            return
+            return nil
         }
         
-        FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password) { (authDataResult, error) in
-            if let error = error {
-                print(error.localizedDescription)
-                return
-            }
-            
-        }
+        return (email, password)
     }
 }
