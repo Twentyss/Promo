@@ -8,7 +8,7 @@
 import Foundation
 import FirebaseDatabase
 
-struct Place: Codable {
+struct Place {
     var placeId: Int
     var placeName: String
     var placeDescription: String
@@ -27,13 +27,13 @@ struct Place: Codable {
     }
 }
 
-struct Promoution: Codable {
+struct Promoution {
     var promoutionId: Int
     var requiredVisits: Int
     var promoutionDescription: Int
 }
 
-enum PlaceType: String, Codable {
+enum PlaceType: String {
     case cafe = "Кафе"
     case pub = "Паб"
     case restaurant = "Ресторан"

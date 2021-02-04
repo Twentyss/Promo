@@ -10,22 +10,24 @@ import FirebaseDatabase
 
 class ProfileViewController: UIViewController {
     
-    private let database = Database.database().reference()
     
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var accountIdLabel: UILabel!
+    
+    
+    private let database = Database.database().reference()
+    var user: User!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        database.child("Places").observeSingleEvent(of: .value) { (data) in
-            guard let value = data.value as? [String: Any] else {
-                return
-            }
-            print(value)
-        }
-     
-     
+        setLabels()
     }
     
-    
+    private func setLabels() {
+        emailLabel.text = user.email
+        nameLabel.text = user.name
+        accountIdLabel.text = user.userId
+    }
 }

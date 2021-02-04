@@ -12,16 +12,17 @@ class LaunchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Downloaded")
         checkUserDataChange()
-    }
-    
-    func checkUserDataChange() {
+
         
+    }
+
+    func checkUserDataChange() {
+//        performSegue(withIdentifier: "fromLaunchToNavigation", sender: nil)
 //TODO: Переделать это
         Auth.auth().addStateDidChangeListener { (auth, user) in
             if user != nil {
-                self.performSegue(withIdentifier: "fromLaunchToTabBar", sender: nil)
+                self.performSegue(withIdentifier: "fromLaunchToNavigation", sender: nil)
                 print("true")
             } else {
                 self.performSegue(withIdentifier: "fromLaunchToNavigation", sender: nil)

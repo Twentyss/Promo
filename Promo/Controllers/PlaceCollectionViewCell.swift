@@ -16,16 +16,19 @@ class PlaceCollectionViewCell: UICollectionViewCell {
         placeDescriptionLabel.text = place.placeDescription
         
         placeNameLabel.textColor = .white
-        placeNameLabel.textColor = .white
-        backgroundColor = .white
+        placeDescriptionLabel.textColor = .white
+        backgroundColor = .black
         
         
-        self.layer.shadowColor = UIColor.black.cgColor
-        self.layer.shadowRadius = 6
-        self.layer.shadowOpacity = 0.25
-        self.clipsToBounds = false
-        self.layer.masksToBounds = false
+        
+//        self.layer.shadowColor = UIColor.black.cgColor
+//        self.layer.shadowRadius = 6
+//        self.layer.shadowOpacity = 0.25
+//        self.clipsToBounds = false
+//        self.layer.masksToBounds = false
         
         layer.cornerRadius = 10
+        
+        
     }
 }
