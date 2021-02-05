@@ -18,21 +18,14 @@ class PlacesCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
- 
-       
-        
-        dataService = DataService()
-        
-        
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.minimumLineSpacing = 20
 
-        
+        dataService = DataService()
         dataService.fetchPlacesData { (places) in
             self.places = places
             self.collectionView.reloadData()
         }
-
-        
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -53,6 +46,8 @@ class PlacesCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "placeCell", for: indexPath) as! PlaceCollectionViewCell
+        
+        print(places)
        
         cell.configureCell(with: places[indexPath.item])
         
@@ -64,8 +59,8 @@ class PlacesCollectionViewController: UICollectionViewController {
     }
 }
 
-//extension PlacesCollectionViewController: UICollectionViewDelegateFlowLayout {
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        CGSize(width: UIScreen.main.bounds.width - 20, height: 250)
-//    }
-//}
+extension PlacesCollectionViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        CGSize(width: UIScreen.main.bounds.width - 20, height: 250)
+    }
+}

@@ -322,28 +322,85 @@
             </objects>
             <point key="canvasLocation" x="2051" y="827"/>
         </scene>
-        <!--Test Collection View Controller-->
+        <!--Places Collection View Controller-->
         <scene sceneID="mPX-uZ-d5U">
             <objects>
-                <collectionViewController id="zjk-9Z-kWY" customClass="TestCollectionViewController" customModule="Promo" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Zl6-2X-dU8">
+                <collectionViewController id="zjk-9Z-kWY" customClass="PlacesCollectionViewController" customModule="Promo" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" dataMode="prototypes" id="Zl6-2X-dU8">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LeJ-sF-jcZ">
-                            <size key="itemSize" width="128" height="128"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LeJ-sF-jcZ">
+                            <size key="itemSize" width="390" height="128"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="placeCell" id="ijH-vE-cqJ">
-                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="placeCell" id="ijH-vE-cqJ" customClass="PlaceCollectionViewCell" customModule="Promo" customModuleProvider="target">
+                                <rect key="frame" x="20" y="0.0" width="350" height="250"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="lKs-ZK-lsN">
-                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="350" height="250"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgImage" translatesAutoresizingMaskIntoConstraints="NO" id="FAc-Sy-DWH" customClass="CustomImageView" customModule="Promo" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="350" height="250"/>
+                                        </imageView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3IT-ag-NFW">
+                                            <rect key="frame" x="0.0" y="150" width="350" height="100"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subway" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCH-OJ-eZE">
+                                                    <rect key="frame" x="8" y="8" width="64.666666666666671" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="0.96246810370000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k2i-JE-jZa">
+                                                    <rect key="frame" x="92.666666666666671" y="13" width="30.666666666666671" height="14"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zvo-H3-5Z4">
+                                                    <rect key="frame" x="303" y="9" width="38.666666666666686" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <state key="normal" image="heart" catalog="system">
+                                                        <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="labelColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="100" id="A4q-RK-Q7V"/>
+                                                <constraint firstItem="oCH-OJ-eZE" firstAttribute="leading" secondItem="3IT-ag-NFW" secondAttribute="leading" constant="8" id="Ged-7N-diX"/>
+                                                <constraint firstAttribute="trailing" secondItem="zvo-H3-5Z4" secondAttribute="trailing" constant="8" id="IYg-md-a3g"/>
+                                                <constraint firstItem="k2i-JE-jZa" firstAttribute="leading" secondItem="oCH-OJ-eZE" secondAttribute="trailing" constant="20" id="YnC-Se-BVP"/>
+                                                <constraint firstItem="k2i-JE-jZa" firstAttribute="top" secondItem="3IT-ag-NFW" secondAttribute="top" constant="13" id="lL1-w8-WUJ"/>
+                                                <constraint firstItem="oCH-OJ-eZE" firstAttribute="top" secondItem="3IT-ag-NFW" secondAttribute="top" constant="8" id="lZB-Oq-IdT"/>
+                                                <constraint firstItem="zvo-H3-5Z4" firstAttribute="top" secondItem="3IT-ag-NFW" secondAttribute="top" constant="9" id="m4e-vf-TOd"/>
+                                                <constraint firstItem="zvo-H3-5Z4" firstAttribute="leading" relation="lessThanOrEqual" secondItem="k2i-JE-jZa" secondAttribute="trailing" constant="180" id="u4k-zb-Hif"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="3IT-ag-NFW" secondAttribute="bottom" id="0hK-T0-ByI"/>
+                                        <constraint firstAttribute="trailing" secondItem="FAc-Sy-DWH" secondAttribute="trailing" id="C08-9I-fUL"/>
+                                        <constraint firstItem="3IT-ag-NFW" firstAttribute="leading" secondItem="lKs-ZK-lsN" secondAttribute="leading" id="Cz6-AV-aPZ"/>
+                                        <constraint firstAttribute="trailing" secondItem="3IT-ag-NFW" secondAttribute="trailing" id="NfW-Lw-qW6"/>
+                                        <constraint firstItem="FAc-Sy-DWH" firstAttribute="leading" secondItem="lKs-ZK-lsN" secondAttribute="leading" id="QcZ-g8-KBO"/>
+                                        <constraint firstItem="FAc-Sy-DWH" firstAttribute="top" secondItem="lKs-ZK-lsN" secondAttribute="top" id="U64-UT-u4b"/>
+                                        <constraint firstAttribute="bottom" secondItem="FAc-Sy-DWH" secondAttribute="bottom" id="shs-GO-mbK"/>
+                                    </constraints>
                                 </collectionViewCellContentView>
+                                <size key="customSize" width="350" height="250"/>
+                                <connections>
+                                    <outlet property="backgorundPlate" destination="3IT-ag-NFW" id="eOt-0w-BqS"/>
+                                    <outlet property="placeDescriptionLabel" destination="k2i-JE-jZa" id="VeB-ck-Ji7"/>
+                                    <outlet property="placeImageView" destination="FAc-Sy-DWH" id="5K4-8S-gag"/>
+                                    <outlet property="placeNameLabel" destination="oCH-OJ-eZE" id="QCf-4S-3rW"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -352,10 +409,13 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="yGZ-ea-NIP"/>
+                    <connections>
+                        <segue destination="Ua2-jV-lV8" kind="show" identifier="placeInfoSegue" id="fL6-36-yby"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zdi-gr-bbT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2889" y="827"/>
+            <point key="canvasLocation" x="2887.6923076923076" y="826.77725118483409"/>
         </scene>
         <!--Places list-->
         <scene sceneID="QhG-M6-iJa">
@@ -430,10 +490,14 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="bgImage" width="1080" height="1920"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

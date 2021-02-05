@@ -14,8 +14,11 @@ class TestCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("11111")
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        layout.itemSize = CGSize(width: 100, height: 40)
+        layout.estimatedItemSize = .init(width: collectionView.frame.width - 40, height: 200)
+        layout.sectionInset = UIEdgeInsets(top: 20, left: 20, bottom: 40, right: 20)
+        layout.minimumLineSpacing = 20
     }
 
     /*

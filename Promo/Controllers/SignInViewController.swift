@@ -74,9 +74,9 @@ extension SignInViewController {
         if segue.identifier == "signInSegue" {
             let tabBarController = segue.destination as! UITabBarController
             let navigationVC = tabBarController.viewControllers?.first as! UINavigationController
-            let placesVC = navigationVC.topViewController as! TestCollectionViewController
+            let placesVC = navigationVC.topViewController as! PlacesCollectionViewController
             let profileVC = tabBarController.viewControllers?.last as! ProfileViewController
-//            placesVC.user = self.user
+            placesVC.user = self.user
             profileVC.user = self.user
         }
     }
